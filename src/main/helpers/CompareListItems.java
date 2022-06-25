@@ -5,7 +5,7 @@ import java.util.List;
 public class CompareListItems {
 
     /**
-     * This will compare and return the match percentage of sourceList against the targetList.
+     * This will compare the list items and return the match percentage of sourceList against the targetList.
      *
      * @return
      */
