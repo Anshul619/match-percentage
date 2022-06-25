@@ -1,4 +1,4 @@
-package main;
+package main.helpers;
 
 import java.util.List;
 
@@ -20,8 +20,8 @@ public class CompareListItems {
 
         for (int i=0; i < sourceList.size(); i++) {
 
+            // item exists, hence increment the match count
             if (targetList.contains(sourceList.get(i))) {
-                //System.out.println("Contains");
                 sourceListMatchedLength++;
             }
         }

@@ -18,6 +18,9 @@ public class MatchPercentageTest {
         matchPercentageObj = new MatchPercentage();
     }
 
+    /**
+     * Case1 - 100% match, A list in B.
+     */
     @Test
     public void test_100percentage_Match() {
         List A = new ArrayList();
@@ -35,6 +38,9 @@ public class MatchPercentageTest {
         assertEquals(matchPercentageObj.calculateMatch(A, B), "100% match");
     }
 
+    /**
+     * Case2 - A contains B
+     */
     @Test
     public void test_A_contains_B() {
         List A = new ArrayList();
@@ -53,6 +59,9 @@ public class MatchPercentageTest {
         assertEquals(matchPercentageObj.calculateMatch(A, B), "A contains B");
     }
 
+    /**
+     * Case3 - B contains C
+     */
     @Test
     public void test_B_contains_A() {
         List A = new ArrayList();

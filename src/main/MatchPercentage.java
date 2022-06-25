@@ -1,12 +1,13 @@
 package main;
 
-import java.util.ArrayList;
+import main.helpers.CompareListItems;
+
 import java.util.List;
 
 public class MatchPercentage {
 
     /**
-     * This method match A & B list and return the output match. This is the driver method.
+     * This method match A & B list and return the output match.
      *
      * @param A
      * @param B
@@ -16,9 +17,6 @@ public class MatchPercentage {
 
         float percentageAB = CompareListItems.calculatePercentage(A, B);
         float percentageBA = CompareListItems.calculatePercentage(B, A);
-
-        //System.out.print("percentageAB ->" + percentageAB);
-        //System.out.print("percentageBA ->" + percentageBA);
 
         if (Float.compare(percentageAB, percentageBA) == 0) {
             return "100% match";
@@ -34,7 +32,7 @@ public class MatchPercentage {
 
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         List A = new ArrayList();
 
@@ -46,5 +44,5 @@ public class MatchPercentage {
         MatchPercentage obj = new MatchPercentage();
         System.out.println(obj.calculateMatch(A, B));
 
-    }
+    }*/
 }
