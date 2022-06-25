@@ -6,8 +6,9 @@ e.g. Consider 2 strings:
 - string 1 = "This is a cat"
 - string 2 = "This is a brown cat"
 
-Match percentage of string 1 with respect to string 2 is `100%` as all words in string 1 are present in string 2.
-Match percentage of string 2 with respect to string 1 is `80%` as only 4 out of 5 words in string 2 are present in string 1.
+Expected o/p
+- Match percentage of string 1 with respect to string 2 is `100%` as all words in string 1 are present in string 2.
+- Match percentage of string 2 with respect to string 1 is `80%` as only 4 out of 5 words in string 2 are present in string 1.
 
 # Problem statement
 
