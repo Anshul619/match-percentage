@@ -1,37 +1,30 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class MatchPercentage {
 
     /**
-     * This will compare the list items and return the match percentage of sourceList against the targetList.
+     * This will compare the collection items and return the match percentage of sourceList against the targetList.
      *
      * @param sourceList - Source list which should be compared.
      * @param targetList - Target list against which source list should be compared.
      *
-     * @return percentage - The percentage of the sourceList and targetList calculation.
+     * @return percentage - The percentage of the sourceList against targetList calculation.
      */
-    public float calculatePercentage(List sourceList, List targetList) {
+    public float calculatePercentage(Collection sourceList, Collection targetList) {
 
         int sourceListLength = sourceList.size();
-        int sourceListMatchedLength = 0;
 
         if (sourceListLength == 0) {
             return 100;
         }
 
-        for (int i=0; i < sourceList.size(); i++) {
-
-            // item exists, hence increment the match count
-            if (targetList.contains(sourceList.get(i))) {
-                sourceListMatchedLength++;
-            }
-        }
+        long sourceListMatchedLength = sourceList.stream().filter(s->targetList.contains(s)).count();
 
         float percentage = ((float)sourceListMatchedLength/sourceListLength*100);
-
         return percentage;
     }
 
@@ -43,7 +36,7 @@ public class MatchPercentage {
      *
      * @return String
      */
-    public String calculateMatch(List A, List B) {
+    public String calculateMatch(Collection A, Collection B) {
 
         float percentageAB = calculatePercentage(A, B);
         float percentageBA = calculatePercentage(B, A);
