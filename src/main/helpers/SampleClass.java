@@ -1,7 +1,7 @@
 package main.helpers;
 
 /**
- * This is test class which can be used for the test object creation.
+ * This is TEST class which can be used for the test object creation.
  */
 public class SampleClass {
 

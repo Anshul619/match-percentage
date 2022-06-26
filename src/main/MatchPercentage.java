@@ -8,7 +8,10 @@ public class MatchPercentage {
     /**
      * This will compare the list items and return the match percentage of sourceList against the targetList.
      *
-     * @return
+     * @param sourceList - Source list which should be compared.
+     * @param targetList - Target list against which source list should be compared.
+     *
+     * @return percentage - The percentage of the sourceList and targetList calculation.
      */
     public float calculatePercentage(List sourceList, List targetList) {
 
@@ -35,9 +38,10 @@ public class MatchPercentage {
     /**
      * This method match A & B list and return the output match.
      *
-     * @param A
-     * @param B
-     * @return
+     * @param A - sourceList
+     * @param B - targetList
+     *
+     * @return String
      */
     public String calculateMatch(List A, List B) {
 
