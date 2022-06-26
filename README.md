@@ -46,3 +46,14 @@ B = ["BAT", "RAT", "CAT"]
 
   output = "50% match" 
   explanation = Only 2 ("RAT", "CAT") out of 4 items in A are present in B
+
+# Required libraries ( to be imported in the IDE )
+
+- This project needs `JDK 1.8` to run.
+- To run the test cases, `JUnit 5.8.1` library is needed.
+
+# How to run the project?
+
+- `src/main/MatchPercentage` is the main java class, with the match percentage implementation
+- `src/test/MatchPercentageTest` contains all the test cases of the project.
+  

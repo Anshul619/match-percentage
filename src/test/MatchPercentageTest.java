@@ -1,13 +1,14 @@
 package test;
 
 import main.MatchPercentage;
+import main.helpers.SampleClass;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.assertEquals;
 
 public class MatchPercentageTest {
 
@@ -80,6 +81,9 @@ public class MatchPercentageTest {
         assertEquals(matchPercentageObj.calculateMatch(A, B), "B contains A");
     }
 
+    /**
+     * Test case when there is 50% match of A against B
+     */
     @Test
     public void test_50percentage_Match() {
         List A = new ArrayList();
@@ -97,6 +101,9 @@ public class MatchPercentageTest {
         assertEquals(matchPercentageObj.calculateMatch(A, B), "50.0% match");
     }
 
+    /**
+     * Test case when both A & B are empty
+     */
     @Test
     public void test_Both_A_B_Empty() {
         List A = new ArrayList();
@@ -147,7 +154,7 @@ public class MatchPercentageTest {
     public void test_Object_50percentage_Match() {
         List A = new ArrayList();
 
-        TestObject testObj1 = new TestObject("Anshul", "Agrawal");
+        SampleClass testObj1 = new SampleClass("Anshul", "Agrawal");
 
         A.add(testObj1);
         A.add(2);
